@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MOOC GIT</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .centrar {
+        text-align: center;
+    }
+
+    header {
+        width: 100%;
+        height: 10%;
+        background: #1e5799;
+        background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+        background: -webkit-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+        background: linear-gradient(to bottom, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8', GradientType=0);
+    }
+
+    .centrar h3 {
+        padding-top: 2%;
+        font-size: 2rem;
+    }
+
+    .centrar h4 {
+        padding-top: 3%;
+    }
+
+    button {
+        height: 30px;
+        width: 100%;
+        background-color: lightgoldenrodyellow;
+        margin-bottom: 2%;
+        border-radius: 20px;
+        font-size: 1.2rem;
+    }
+
+    .caja-centrar {
+        width: 50%;
+        height: 20%;
+        margin-top: 3%;
+        margin-left: 25%;
+    }
+
+    .caja-centrar div:first-child {
+        width: 50%;
+        height: auto;
+        margin-left: 25%;
+        /* outline: 2px solid blueviolet; */
+    }
+
+    .caja-centrar div:nth-of-type(2) {
+        width: 50%;
+        height: auto;
+        margin-left: 25%;
+        /* outline: 2px solid blueviolet; */
+        margin-top: 15px;
+    }
+
+    .caja-centrar div:nth-of-type(3) {
+        width: 75%;
+        height: auto;
+        margin-left: 10%;
+        margin-top: 15px;
+
+    }
+
+    p {
+        font-size: 1.6rem;
+        text-align: center;
+    }
+
+    input[type="text"],
+    label {
+        font-weight: bold;
+        margin-left: 25%;
+    }
+
+    input[type=text] {
+        width: 200px;
+        height: 50px;
+        line-height: 2;
+        font-size: 1.6rem;
+        border: none;
+        border-bottom: 1px solid black;
+        text-align: center;
+    }
+
+    label {
+        font-size: 1.4rem;
+    }
+
+    footer {
+        margin-top: 3%;
+        width: 100%;
+        height: 30px;
+        outline: 1px solid black;
+    }
+
+    button:hover {
+        background-color: burlywood;
+    }
+</style>
+
+<body>
+    <header>
+        <div class="centrar">
+            <h1>CALCULADORA DE DAVID RAMOS BARAJAS</h1>
+            <h4> MOOC GitHub | MiriadaX</h4>
+        </div>
+    </header>
+    <section>
+        <div class="caja-centrar">
+            <div>
+                <p>Introduce aquí el número.</p>
+                <input type="text" id="texto" placeholder="here!">
+                </input>
+            </div>
+            <div>
+                <button type="button" id="calcularx^3" name="3"> Calcular x
+                    <sup>^</sup>3</button>
+
+            </div>
+            <div>
+                <p id="mostrar"></p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p class="centrar">MOOC GitHub |-| Miriada X |-| Made with
+            <span style="color: #e25555;">&#9829;</span>
+        </p>
+    </footer>
+</body>
+<script>
+    // setea las variables
+    var btn0 = document.getElementById("calcularx^3").addEventListener('click', (e) => { calcular(e.target.name) });
+    
+    function calcular(elevar) {
+        var numero = document.getElementById("texto").value;
+        var result = document.getElementById("mostrar");
+        console.log(elevar)
+        if (numero.trim() != "") {
+            result.innerHTML = "";
+            isNaN(numero) ? result.innerHTML = "Solo se permite la introducción de números" : result.innerHTML = "El número " + numero + " elevado al cubo es " + Math.pow(numero, elevar);
+        } else {
+            result.innerHTML = "El campo número no puede estar vacío";
+        }
+    }
+
+</script>
+
+</html>
