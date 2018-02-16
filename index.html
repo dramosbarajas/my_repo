@@ -130,7 +130,8 @@
             <div>
                 <button type="button" id="calcularx^3" name="3"> Calcular x
                     <sup>^</sup>3</button>
-
+                <button type="button" id="calcularx^4" name="4"> Calcular x
+                    <sup>^</sup>4</button>
             </div>
             <div>
                 <p id="mostrar"></p>
@@ -146,7 +147,7 @@
 <script>
     // setea las variables
     var btn0 = document.getElementById("calcularx^3").addEventListener('click', (e) => { calcular(e.target.name) });
-    
+    var btn1 = document.getElementById("calcularx^4").addEventListener('click', (e) => { calcular(e.target.name) });
     function calcular(elevar) {
         var numero = document.getElementById("texto").value;
         var result = document.getElementById("mostrar");
